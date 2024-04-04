@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1002947702719",
+    "project_id": "childtrackerrr",
+    "storage_bucket": "childtrackerrr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002947702719:android:132023ae76b288ce65bb0a",
+        "android_client_info": {
+          "package_name": "com.child.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALA_7o2xrtwvZrlXgnZdly9UE5tb4S6N0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
