@@ -3,6 +3,7 @@ import 'CustomTextField.dart'; // Make sure to import your custom text field wid
 import 'authentication_service.dart';
 import 'signup_screen.dart'; // Import the SignupScreen
 import 'forgot_password_email.dart'; // Import the ForgotPasswordScreen
+import 'choose_host.dart'; // Import the ChooseHostScreen
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -73,12 +74,21 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 TextButton(
-                  onPressed: () {
-                    AuthenticationService().signIn(
+                  onPressed: () async {
+                    // Sign in and navigate to choose_host.dart screen
+                      bool success = await AuthenticationService().signIn(
                       email: emailController.text.trim(),
                       password: passwordController.text.trim(),
                       context: context,
                     );
+                    if (success) {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => choose()),
+                      );
+                    } else {
+                      // Handle sign-in failure, if needed
+                    }
                   },
                   child: const Text('Login'),
                 ),
